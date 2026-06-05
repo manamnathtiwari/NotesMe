@@ -1,339 +1,200 @@
 <div align="center">
 
-<img src="icons/icon128.png" width="150" alt="NotesMe"/>
+# NotesMe
 
-# ✨ NotesMe
+**Transform every webpage into your personal knowledge workspace**
 
-### Transform Every Webpage Into Your Personal Knowledge Workspace
+[![Stars](https://img.shields.io/github/stars/manamnathtiwari/NotesMe?style=for-the-badge&logo=github&label=Stars)](https://github.com/manamnathtiwari/NotesMe)
+![Manifest V3](https://img.shields.io/badge/Manifest-V3-0F172A?style=for-the-badge)
+![Chrome](https://img.shields.io/badge/Chrome-Supported-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
+![Edge](https://img.shields.io/badge/Edge-Supported-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-111827?style=for-the-badge)
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=1200&color=29B6F6&center=true&vCenter=true&width=900&lines=Highlight+Important+Content;Draw+Directly+on+Any+Website;Create+Persistent+Sticky+Notes;Everything+Saves+Automatically;Your+Web%2C+Your+Annotations" />
-</p>
-
-<p align="center">
-
-<a href="https://github.com/manamnathtiwari/NotesMe">
-<img src="https://img.shields.io/github/stars/manamnathtiwari/NotesMe?style=for-the-badge&logo=github&label=Stars"/>
-</a>
-
-<img src="https://img.shields.io/badge/Manifest-V3-0F172A?style=for-the-badge"/>
-
-<img src="https://img.shields.io/badge/Chrome-Supported-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white"/>
-
-<img src="https://img.shields.io/badge/Edge-Supported-0078D7?style=for-the-badge&logo=microsoftedge&logoColor=white"/>
-
-<img src="https://img.shields.io/badge/License-MIT-111827?style=for-the-badge"/>
-
-</p>
-
-<p align="center">
-<a href="https://github.com/manamnathtiwari/NotesMe"><strong>Repository</strong></a>
-•
-<a href="https://linkedin.com/manamnathtiwari"><strong>LinkedIn</strong></a>
-•
-<a href="mailto:manamnathtiwari@gmail.com"><strong>Contact</strong></a>
-</p>
-
----
-
-## 🚀 The Problem
-
-While reading articles, documentation, research papers, tutorials, or online courses, valuable insights often disappear the moment you close the tab.
-
-Traditional note-taking apps force users to constantly switch between the content and their notes, breaking focus and reducing productivity.
-
----
-
-## 💡 The Solution
-
-**NotesMe creates a permanent annotation layer directly on top of any webpage.**
-
-Instead of taking notes somewhere else, NotesMe allows users to:
-
-* 🎨 Highlight important information
-* ✏️ Draw directly on webpages
-* 📝 Create sticky notes anywhere
-* 💾 Automatically save everything
-* 🔄 Restore annotations when revisiting
-
-Your thoughts stay connected to the content that inspired them.
-
----
-
-## 🎥 Demo
-
-<div align="center">
-
-### NotesMe In Action
-
-<img src="assets/demo.gif" alt="NotesMe Demo" width="100%"/>
-
-</div>
-
-> Replace this GIF with a 20–30 second screen recording showing highlighting, drawing, note creation, refresh, and automatic restoration.
-
----
-
-# ✨ Core Features
-
-<table>
-<tr>
-<td width="33%">
-
-### 🎨 Smart Highlighting
-
-Highlight text across webpages with resilient anchoring.
-
-Highlights survive:
-
-* Refreshes
-* Dynamic content
-* Minor content edits
-* SPA navigation
-
-</td>
-
-<td width="33%">
-
-### ✏️ Freehand Drawing
-
-Draw directly on webpages using:
-
-* Mouse
-* Touch
-* Stylus
-* Pen devices
-
-Perfect for diagrams, sketches, and visual explanations.
-
-</td>
-
-<td width="33%">
-
-### 📝 Sticky Notes
-
-Drop notes anywhere.
-
-Features:
-
-* Drag & Move
-* Auto Save
-* Instant Restore
-* Persistent Placement
-
-</td>
-</tr>
-</table>
-
----
-
-## ⚡ Built For
-
-<div align="center">
-
-| Users            | Use Cases                 |
-| ---------------- | ------------------------- |
-| 🎓 Students      | Study material annotation |
-| 👨‍💻 Developers | Documentation notes       |
-| 🔬 Researchers   | Paper review              |
-| 📚 Readers       | Article highlighting      |
-| 💼 Professionals | Knowledge management      |
+[Repository](https://github.com/manamnathtiwari/NotesMe) · [LinkedIn](https://linkedin.com/manamnathtiwari) · [Contact](mailto:manamnathtiwari@gmail.com)
 
 </div>
 
 ---
 
-## 🧠 Intelligent Persistence Engine
+## The Problem
 
-NotesMe uses multiple recovery strategies to ensure annotations remain attached to the correct content.
+While reading articles, documentation, research papers, or online courses — valuable insights disappear the moment you close the tab. Traditional note-taking apps force you to constantly switch context, breaking focus and reducing productivity.
 
-```text
+## The Solution
+
+NotesMe creates a **permanent annotation layer** directly on top of any webpage. Instead of taking notes somewhere else, your thoughts stay connected to the content that inspired them.
+
+---
+
+## Core Features
+
+| Feature | Description |
+|---|---|
+| 🎨 **Smart Highlighting** | Highlight text with resilient anchoring that survives refreshes, dynamic content, and SPA navigation |
+| ✏️ **Freehand Drawing** | Draw directly on webpages using mouse, touch, stylus, or pen devices |
+| 📝 **Sticky Notes** | Drop draggable notes anywhere — they auto-save and restore exactly where you left them |
+| 💾 **Auto Persistence** | Everything saves automatically and restores when you revisit the page |
+| ↩️ **Undo / Redo** | Full history for all annotation types |
+| 📤 **Export / Import** | Take your annotations with you |
+
+---
+
+## Persistence Engine
+
+NotesMe uses multiple recovery strategies to ensure annotations remain attached to the correct content even as pages change.
+
+```
 Page Visit
-   │
-   ▼
-Normalize URL
-   │
-   ▼
-Generate Storage Key
-   │
-   ▼
+    │
+    ▼
+Normalize URL → Generate Storage Key
+    │
+    ▼
 Save Highlights + Notes + Drawings
-   │
-   ▼
+    │
+    ▼
 User Revisits Page
-   │
-   ├── Offset Anchoring
-   ├── Context Matching
-   ├── Text Search Recovery
-   └── DOM Mutation Detection
+    │
+    ├── Offset Anchoring
+    ├── Context Matching
+    ├── Text Search Recovery
+    └── DOM Mutation Detection
 ```
 
-### Reliability Features
+**Reliability features:**
 
-✅ Context-based anchoring
-
-✅ Text quote recovery
-
-✅ MutationObserver support
-
-✅ Retry & backoff strategy
-
-✅ Dynamic page handling
-
-✅ Automatic cleanup
+- Context-based anchoring
+- Text quote recovery
+- MutationObserver support
+- Retry & backoff strategy
+- Dynamic page handling
+- Automatic cleanup
 
 ---
 
-## 🔒 Privacy First
+## Privacy First
 
-Unlike many productivity tools:
+Unlike most productivity tools, NotesMe is entirely local.
 
-* No accounts
-* No analytics
-* No tracking
-* No third-party servers
-
-All annotations are stored locally using:
-
-```javascript
-chrome.storage.local
-```
-
-Your data never leaves your browser.
+- **No accounts** — nothing to sign up for
+- **No analytics** — zero tracking or telemetry
+- **No third-party servers** — your data never leaves your browser
+- **Local storage only** — everything lives in `chrome.storage.local`
 
 ---
 
-## ⚙️ Installation
+## Installation
 
-### Clone Repository
+**1. Clone the repository**
 
 ```bash
 git clone https://github.com/manamnathtiwari/NotesMe.git
 ```
 
-### Load Extension
+**2. Open extensions in your browser**
 
-1. Open:
-
-```text
-chrome://extensions
+```
+chrome://extensions    # Chrome
+edge://extensions      # Edge
 ```
 
-or
+**3. Enable Developer Mode** (toggle in the top-right corner)
 
-```text
-edge://extensions
-```
+**4. Click Load Unpacked** and select the NotesMe folder
 
-2. Enable **Developer Mode**
-3. Click **Load Unpacked**
-4. Select the NotesMe folder
-5. Start annotating any webpage
+**5. Done** — visit any webpage and start annotating
 
 ---
 
-## ⌨️ Keyboard Shortcuts
+## Keyboard Shortcuts
 
-| Shortcut | Action          |
-| -------- | --------------- |
-| Alt + H  | Highlight Mode  |
-| Alt + D  | Drawing Mode    |
-| Alt + N  | Create Note     |
-| Alt + S  | Toggle Sidebar  |
-| Alt + T  | Toggle Toolbar  |
-| Alt + Z  | Undo            |
-| Alt + Y  | Redo            |
-| Alt + P  | Command Palette |
+| Shortcut | Action |
+|---|---|
+| `Alt` + `H` | Highlight mode |
+| `Alt` + `D` | Drawing mode |
+| `Alt` + `N` | Create new note |
+| `Alt` + `S` | Toggle sidebar |
+| `Alt` + `T` | Toggle toolbar |
+| `Alt` + `Z` | Undo |
+| `Alt` + `Y` | Redo |
+| `Alt` + `P` | Command palette |
 
 ---
 
-## 📂 Project Structure
+## Built For
 
-```text
-NotesMe
-│
+| Audience | Use Case |
+|---|---|
+| 🎓 Students | Study material annotation |
+| 👨‍💻 Developers | Documentation notes |
+| 🔬 Researchers | Paper review & markup |
+| 📚 Readers | Article highlighting |
+| 💼 Professionals | Knowledge management |
+
+---
+
+## Project Structure
+
+```
+NotesMe/
 ├── manifest.json
 ├── background.js
 ├── content.js
 ├── content.css
 ├── popup.html
 ├── popup.js
-│
-├── icons
+├── icons/
 │   ├── icon16.png
 │   ├── icon48.png
 │   └── icon128.png
-│
-└── assets
+└── assets/
     ├── demo.gif
-    ├── screenshots
+    ├── screenshots/
     └── banner.png
 ```
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
-### Current Progress
+### Shipped
 
-* [x] Highlight Engine
-* [x] Drawing Layer
-* [x] Sticky Notes
-* [x] Sidebar
-* [x] Undo / Redo
-* [x] Auto Persistence
-* [x] Export / Import
-* [x] Sync Support
+- [x] Highlight engine
+- [x] Drawing layer
+- [x] Sticky notes
+- [x] Sidebar & toolbar
+- [x] Undo / redo
+- [x] Auto persistence
+- [x] Export / import
+- [x] Sync support
 
-### Upcoming
+### Coming Up
 
-* [ ] PDF Annotation
-* [ ] Firefox Support
-* [ ] Safari Support
-* [ ] End-to-End Encryption
-* [ ] AI-Powered Summaries
-* [ ] Annotation Search
+- [ ] PDF annotation
+- [ ] Firefox support
+- [ ] Safari support
+- [ ] End-to-end encryption
+- [ ] AI-powered summaries
+- [ ] Annotation search
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-<div align="center">
-
-### Manamnath Tiwari
-
-Artificial Intelligence & Machine Learning Engineer
+**Manam Tiwari** — AI/ML Engineer
 
 Building practical software, AI systems, developer tools, and productivity applications.
 
-<p align="center">
-
-<a href="https://github.com/manamnathtiwari">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
-</a>
-
-<a href="https://linkedin.com/manamnathtiwari">
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-
-<a href="mailto:manamnathtiwari@gmail.com">
-<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
-
-</p>
-
-</div>
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/manamnathtiwari)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/manamnathtiwari)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:manamnathtiwari@gmail.com)
 
 ---
 
 <div align="center">
 
-## ⭐ Star This Project
+If NotesMe improves your workflow, consider starring the repository — it helps the project grow.
 
-If NotesMe improves your workflow, consider giving the repository a star.
-
-It helps the project grow and supports future development.
-
-### NotesMe — Your Web, Your Knowledge, Your Notes.
+**NotesMe — Your web, your knowledge, your notes.**
 
 </div>
