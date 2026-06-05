@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NotesMe — Blue Edition</title>
+    <style>
+      :root {
+        --batman-black: #0a1929;
+        --batman-gray: #132f4c;
+        --batman-yellow: #29b6f6;
+        --batman-accent: #1565c0;
+      }
+      body {
+        width: 380px;
+        margin: 0;
+        padding: 14px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, var(--batman-black) 0%, var(--batman-gray) 100%);
+        color: var(--batman-yellow);
+        border: 2px solid var(--batman-yellow);
+        border-radius: 8px;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 16px;
+        color: var(--batman-yellow);
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      }
+      .actions {
+        display: grid;
+        gap: 8px;
+      }
+      button {
+        width: 100%;
+        border: 1px solid var(--batman-yellow);
+        border-radius: 6px;
+        padding: 8px;
+        font-size: 12px;
+        cursor: pointer;
+        background: var(--batman-accent);
+        color: var(--batman-yellow);
+        transition: all 0.2s ease;
+      }
+      button:hover {
+        background: var(--batman-yellow);
+        color: var(--batman-black);
+        box-shadow: 0 0 10px var(--batman-yellow);
+      }
+      button.danger {
+        background: #b91c1c;
+        border-color: #991b1b;
+      }
+      button.danger:hover {
+        background: #991b1b;
+        box-shadow: 0 0 8px #b91c1c;
+      }
+      .storage-section {
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid var(--batman-yellow);
+        opacity: 0.8;
+      }
+      .storage-label {
+        font-size: 11px;
+        color: var(--batman-yellow);
+        margin: 0 0 6px;
+      }
+      .storage-bar-bg {
+        height: 6px;
+        background: var(--batman-gray);
+        border-radius: 3px;
+        overflow: hidden;
+        margin-bottom: 4px;
+        border: 1px solid var(--batman-yellow);
+      }
+      .storage-bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--batman-yellow), #4fc3f7);
+        border-radius: 3px;
+        transition: width 0.3s;
+      }
+      .storage-note {
+        font-size: 10px;
+        color: var(--batman-yellow);
+        margin: 0;
+        opacity: 0.7;
+      }
+      .status {
+        margin: 10px 0 0;
+        font-size: 11px;
+        color: var(--batman-yellow);
+        min-height: 14px;
+      }
+      .status.error {
+        color: #ff6b6b;
+      }
+      .status.ok {
+        color: var(--batman-yellow);
+      }
+      .settings-section {
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid var(--batman-yellow);
+        opacity: 0.9;
+      }
+      .settings-label {
+        display: block;
+        font-size: 11px;
+        color: var(--batman-yellow);
+        margin: 0 0 6px;
+        text-transform: uppercase;
+      }
+      select {
+        width: 100%;
+        border: 1px solid var(--batman-yellow);
+        border-radius: 6px;
+        padding: 6px 8px;
+        font-size: 12px;
+        background: var(--batman-accent);
+        color: var(--batman-yellow);
+      }
+      input[type="text"],
+      input[type="password"],
+      textarea {
+        width: calc(100% - 16px);
+        border: 1px solid var(--batman-yellow);
+        border-radius: 6px;
+        padding: 8px;
+        font-size: 12px;
+        background: var(--batman-black);
+        color: var(--batman-yellow);
+      }
+      input[type="text"]:focus,
+      input[type="password"]:focus,
+      textarea:focus {
+        outline: none;
+        box-shadow: 0 0 8px var(--batman-yellow);
+      }
+      .settings-help {
+        margin: 6px 0 0;
+        font-size: 10px;
+        color: #9ca3af;
+      }
+      .small-actions {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .small-actions button {
+        padding: 7px;
+        font-size: 12px;
+      }
+      .panel {
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid #e5e7eb;
+      }
+      .panel-title {
+        margin: 0 0 6px;
+        font-size: 11px;
+        color: #4b5563;
+      }
+      .search-input {
+        width: 100%;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        padding: 7px 8px;
+        font-size: 12px;
+        box-sizing: border-box;
+      }
+      .list {
+        margin-top: 6px;
+        display: grid;
+        gap: 6px;
+        max-height: 170px;
+        overflow: auto;
+      }
+      .list-item {
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 7px;
+        background: #fff;
+        font-size: 11px;
+      }
+      .list-item a {
+        color: #0f766e;
+        text-decoration: none;
+      }
+      .list-item a:hover {
+        text-decoration: underline;
+      }
+      .muted {
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>NotesMe</h1>
+    <div class="actions">
+      <button id="toggleToolbar">Toggle Toolbar</button>
+      <button id="highlightNow">Toggle Highlight Mode</button>
+      <button id="toggleDraw">Toggle Draw Mode</button>
+      <button id="toggleTextNoteMode">Place Text Note (click page)</button>
+      <button id="toggleSidebar">Toggle Notes Sidebar</button>
+      <button id="toggleFavorite">Toggle Favorite Page</button>
+      <button id="clearPage" class="danger">Clear This Page</button>
+    </div>
+    <div class="small-actions">
+      <button id="exportData">Export Data</button>
+      <button id="importData">Import Data</button>
+    </div>
+    <div class="small-actions">
+      <input id="exportPassword" type="password" class="search-input" placeholder="Export password (optional)" />
+      <input id="importPassword" type="password" class="search-input" placeholder="Import password (if needed)" />
+    </div>
+    <input id="importFile" type="file" accept="application/json" style="display:none" />
+    <div class="storage-section">
+      <p class="storage-label">Storage used: <span id="storageUsed">…</span></p>
+      <div class="storage-bar-bg"><div class="storage-bar-fill" id="storageBarFill" style="width:0%"></div></div>
+      <p class="storage-note">Auto-clears pages not visited in 60 days. Local storage is unlimited.</p>
+    </div>
+    <div class="settings-section">
+      <label class="settings-label" for="keyMode">Page Keying Mode</label>
+      <select id="keyMode">
+        <option value="smart">Smart (path + clean query + SPA hash)</option>
+        <option value="path">Path only (origin + pathname)</option>
+      </select>
+      <p class="settings-help">Changing this affects how page notes are separated. Current tab updates immediately.</p>
+
+      <label class="settings-label" for="syncMode" style="margin-top:10px">Cross-device Sync</label>
+      <select id="syncMode">
+        <option value="off">Off (local only)</option>
+        <option value="metadata">Metadata only (favorites, recents, settings)</option>
+        <option value="full">Full sync (recent pages, size-limited)</option>
+      </select>
+      <p class="settings-help">Full sync skips oversized pages to stay within Chrome sync limits.</p>
+
+      <label class="settings-label" for="conflictPolicy" style="margin-top:10px">Conflict Resolution</label>
+      <select id="conflictPolicy">
+        <option value="newest">Newest timestamp wins</option>
+        <option value="local">Prefer local device</option>
+        <option value="remote">Prefer synced copy</option>
+      </select>
+
+      <div class="small-actions" style="margin-top:8px">
+        <button id="syncNow">Sync Now</button>
+        <button id="syncPull">Pull Latest</button>
+      </div>
+
+      <label class="settings-label" for="restoreSession" style="margin-top:10px">Session Restore</label>
+      <select id="restoreSession">
+        <option value="on">On (restore scroll + UI state)</option>
+        <option value="off">Off (content only)</option>
+      </select>
+
+      <div class="small-actions" style="margin-top:8px">
+        <button id="pathModeForSite">Use Path Key For Site</button>
+        <button id="runSelfTest">Run Self Test</button>
+      </div>
+    </div>
+    <div class="panel">
+      <p class="panel-title">Global Search</p>
+      <input id="globalSearch" class="search-input" type="search" placeholder="Search all pages..." />
+      <div id="searchResults" class="list"></div>
+    </div>
+    <div class="panel">
+      <p class="panel-title">Recent Pages</p>
+      <div id="recentPages" class="list"></div>
+    </div>
+    <div class="panel">
+      <p class="panel-title">Storage Health</p>
+      <div id="storageHealth" class="list"></div>
+    </div>
+    <div class="panel">
+      <p class="panel-title">Sync Conflicts</p>
+      <div class="small-actions" style="margin-top:0">
+        <button id="refreshConflicts">Refresh</button>
+        <button id="clearConflicts">Clear Log</button>
+      </div>
+      <div id="syncConflicts" class="list"></div>
+    </div>
+    <p id="status" class="status"></p>
+    <script src="popup.js"></script>
+  </body>
+</html>
