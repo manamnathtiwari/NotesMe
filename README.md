@@ -29,7 +29,7 @@
 <p align="center">
 <a href="https://github.com/manamnathtiwari/NotesMe"><strong>Repository</strong></a>
 •
-<a href="https://linkedin.com/manamnathtiwari"><strong>LinkedIn</strong></a>
+<a href="www.linkedin.com/in/manamnathtiwari"><strong>LinkedIn</strong></a>
 •
 <a href="mailto:manamnathtiwari@gmail.com"><strong>Contact</strong></a>
 </p>
@@ -312,7 +312,7 @@ Building practical software, AI systems, developer tools, and productivity appli
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
 </a>
 
-<a href="https://linkedin.com/manamnathtiwari">
+<a href="www.linkedin.com/in/manamnathtiwari">
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 
